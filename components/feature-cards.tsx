@@ -2,7 +2,7 @@ import Link from "next/link"
 import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
-const ARTICLESHIP_URL = "https://chartered-connects.onrender.com/"
+const ARTICLESHIP_URL = "https://ca-articleship-connect.netlify.app/"
 
 const cards = [
   {

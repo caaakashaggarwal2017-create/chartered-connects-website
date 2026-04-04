@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils/cn"
 
-const ARTICLESHIP_URL = "https://chartered-connects.onrender.com/"
+const ARTICLESHIP_URL = "https://ca-articleship-connect.netlify.app/"
 
 const navLinks = [
   { href: "/resources", label: "Resources", external: false },
