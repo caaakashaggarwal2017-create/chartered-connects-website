@@ -1,0 +1,140 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="thumbGlow" cx="30%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="thumbNodeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#C97A08"/>
+    </radialGradient>
+    <clipPath id="photoClip">
+      <rect x="700" y="60" width="520" height="600" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  BACKGROUND                                             -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect width="1280" height="720" fill="#0A1628"/>
+  <ellipse cx="380" cy="360" rx="420" ry="360" fill="url(#thumbGlow)"/>
+
+  <!-- Subtle network dots (background) -->
+  <circle cx="55"   cy="80"  r="2"   fill="#F5A623" opacity="0.20"/>
+  <circle cx="145"  cy="185" r="1.5" fill="white"   opacity="0.13"/>
+  <circle cx="88"   cy="548" r="2"   fill="#F5A623" opacity="0.18"/>
+  <circle cx="168"  cy="645" r="1.5" fill="white"   opacity="0.12"/>
+  <circle cx="620"  cy="42"  r="1.5" fill="white"   opacity="0.12"/>
+  <circle cx="618"  cy="678" r="1.5" fill="white"   opacity="0.12"/>
+  <line x1="55" y1="80" x2="145" y2="185" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+  <line x1="88" y1="548" x2="168" y2="645" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  RED TOP-LEFT ACCENT STRIPE                            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="0" y="0" width="6" height="720" fill="#E53E3E"/>
+  <rect x="0" y="0" width="640" height="6" fill="#E53E3E" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  LEFT PANEL  — branding + text                         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- CC logo mark (scale 5), top-left corner, center at (88, 88) -->
+  <!-- offset: (88-14×5, 88-14×5) = (88-70, 88-70) = (18, 18) -->
+  <!-- TL(4,8)→(38,58)  TR(24,8)→(138,58) -->
+  <!-- BL(4,20)→(38,118) BR(24,20)→(138,118) -->
+  <line x1="88" y1="88" x2="38"  y2="58"  stroke="white" stroke-width="2.5" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="88" y1="88" x2="138" y2="58"  stroke="white" stroke-width="2.5" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="88" y1="88" x2="38"  y2="118" stroke="white" stroke-width="2.5" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="88" y1="88" x2="138" y2="118" stroke="white" stroke-width="2.5" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="38"  y1="58"  x2="138" y2="58"  stroke="#F5A623" stroke-width="1.8" stroke-opacity="0.40" stroke-linecap="round"/>
+  <line x1="38"  y1="118" x2="138" y2="118" stroke="#F5A623" stroke-width="1.8" stroke-opacity="0.40" stroke-linecap="round"/>
+  <circle cx="38"  cy="58"  r="9"  fill="white"/>
+  <circle cx="138" cy="58"  r="9"  fill="white"/>
+  <circle cx="38"  cy="118" r="9"  fill="white"/>
+  <circle cx="138" cy="118" r="9"  fill="white"/>
+  <circle cx="88"  cy="88"  r="14" fill="url(#thumbNodeGrad)"/>
+
+  <!-- "Chartered Connects" wordmark -->
+  <text x="164" y="102"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="28" font-weight="700" fill="white">Chartered Connects</text>
+
+  <!-- Thin gold rule below header -->
+  <rect x="24" y="152" width="580" height="2" fill="#F5A623" opacity="0.35" rx="1"/>
+
+  <!-- "CC PODCAST" label -->
+  <text x="24" y="208"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="22" font-weight="700" fill="#E53E3E" letter-spacing="3">CC PODCAST</text>
+
+  <!-- Episode number placeholder -->
+  <text x="24" y="258"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="26" font-weight="500" fill="#F5A623" opacity="0.75">Ep 00</text>
+
+  <!-- Episode title placeholder (replace per episode) -->
+  <text x="24" y="330"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="52" font-weight="800" fill="white" dominant-baseline="auto">Guest Name</text>
+  <text x="24" y="398"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="52" font-weight="800" fill="white">Speaks Out</text>
+
+  <!-- Guest title / company -->
+  <text x="24" y="460"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="30" font-weight="500" fill="#F5A623">Guest Title · Company Name</text>
+
+  <!-- Topic pill -->
+  <rect x="24" y="490" width="220" height="44" rx="22" fill="#E53E3E" opacity="0.18"/>
+  <rect x="24" y="490" width="220" height="44" rx="22" fill="none" stroke="#E53E3E" stroke-width="1.5" stroke-opacity="0.50"/>
+  <text x="134" y="519"
+    text-anchor="middle"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="20" font-weight="600" fill="#E53E3E">Topic Tag Here</text>
+
+  <!-- Duration pill -->
+  <rect x="258" y="490" width="148" height="44" rx="22" fill="white" opacity="0.06"/>
+  <rect x="258" y="490" width="148" height="44" rx="22" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.25"/>
+  <text x="332" y="519"
+    text-anchor="middle"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="20" font-weight="500" fill="white" opacity="0.70">⏱ 58 min</text>
+
+  <!-- Bottom gold rule -->
+  <rect x="24" y="620" width="580" height="2" fill="#F5A623" opacity="0.30" rx="1"/>
+
+  <!-- Tagline bottom-left -->
+  <text x="24" y="666"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="22" font-weight="500" fill="white" opacity="0.55">Inspire. Learn. Lead.</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  RIGHT PANEL  — guest photo area                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- Divider line -->
+  <rect x="678" y="0" width="2" height="720" fill="#F5A623" opacity="0.18"/>
+
+  <!-- Photo placeholder -->
+  <rect x="700" y="60" width="520" height="600" rx="12" fill="#0F2040"/>
+  <rect x="700" y="60" width="520" height="600" rx="12" fill="none" stroke="#F5A623" stroke-width="1.5" stroke-opacity="0.20"/>
+
+  <!-- Photo placeholder icon -->
+  <circle cx="960" cy="300" r="80" fill="white" opacity="0.06"/>
+  <rect   cx="960" cy="430" x="890" y="400" width="140" height="80" rx="8" fill="white" opacity="0.06"/>
+  <text x="960" y="540"
+    text-anchor="middle"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="22" font-weight="500"
+    fill="white" opacity="0.30">Replace with guest photo</text>
+
+  <!-- Bottom branding strip on photo area -->
+  <rect x="700" y="636" width="520" height="24" rx="0" fill="#F5A623" opacity="0.08"/>
+  <text x="960" y="654"
+    text-anchor="middle"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="18" font-weight="600"
+    fill="#F5A623" opacity="0.70">charteredconnects.com/podcast</text>
+</svg>

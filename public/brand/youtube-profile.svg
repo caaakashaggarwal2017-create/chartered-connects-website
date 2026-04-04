@@ -1,0 +1,84 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#E8920A" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#C97A08" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#0A1628"/>
+
+  <!-- Ambient glow centered on logo mark -->
+  <circle cx="400" cy="400" r="300" fill="url(#bgGlow)"/>
+
+  <!-- Background network dots — corners and edges (very subtle) -->
+  <!-- Top area -->
+  <circle cx="112" cy="128" r="2.5" fill="#F5A623" opacity="0.22"/>
+  <circle cx="698" cy="152" r="2.5" fill="#F5A623" opacity="0.20"/>
+  <circle cx="400"  cy="54"  r="2"   fill="white"   opacity="0.16"/>
+  <circle cx="240"  cy="200" r="2"   fill="white"   opacity="0.12"/>
+  <circle cx="560"  cy="200" r="2"   fill="white"   opacity="0.12"/>
+  <!-- Bottom area -->
+  <circle cx="88"  cy="672" r="2.5" fill="#F5A623" opacity="0.22"/>
+  <circle cx="712" cy="648" r="2.5" fill="#F5A623" opacity="0.20"/>
+  <circle cx="400"  cy="746" r="2"   fill="white"   opacity="0.16"/>
+  <circle cx="240"  cy="600" r="2"   fill="white"   opacity="0.12"/>
+  <circle cx="560"  cy="600" r="2"   fill="white"   opacity="0.12"/>
+  <!-- Sides -->
+  <circle cx="54"  cy="400" r="2"   fill="white"   opacity="0.16"/>
+  <circle cx="746" cy="400" r="2"   fill="white"   opacity="0.16"/>
+
+  <!-- Subtle outer connecting lines (background network feel) -->
+  <line x1="112" y1="128" x2="240" y2="200" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+  <line x1="698" y1="152" x2="560" y2="200" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+  <line x1="88"  y1="672" x2="240" y2="600" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+  <line x1="712" y1="648" x2="560" y2="600" stroke="white" stroke-width="1" stroke-opacity="0.07"/>
+  <line x1="240" y1="200" x2="54"  y2="400" stroke="white" stroke-width="1" stroke-opacity="0.06"/>
+  <line x1="560" y1="200" x2="746" y2="400" stroke="white" stroke-width="1" stroke-opacity="0.06"/>
+
+  <!--
+    MAIN LOGO MARK
+    Original SVG viewBox: 0 0 28 28, center node at (14,14)
+    Scale: 11x  →  28px × 11 = 308px mark
+    Offset to center at (400,400): dx = 400 – 14×11 = 246,  dy = 400 – 14×11 = 246
+    Nodes:
+      Center     (14,14) → (400, 400)
+      Top-Left   ( 4, 8) → (290, 334)
+      Top-Right  (24, 8) → (510, 334)
+      Bot-Left   ( 4,20) → (290, 466)
+      Bot-Right  (24,20) → (510, 466)
+  -->
+
+  <!-- Spokes: center → corners (white, semi-transparent) -->
+  <line x1="400" y1="400" x2="290" y2="334" stroke="white" stroke-width="4.5" stroke-opacity="0.50" stroke-linecap="round"/>
+  <line x1="400" y1="400" x2="510" y2="334" stroke="white" stroke-width="4.5" stroke-opacity="0.50" stroke-linecap="round"/>
+  <line x1="400" y1="400" x2="290" y2="466" stroke="white" stroke-width="4.5" stroke-opacity="0.50" stroke-linecap="round"/>
+  <line x1="400" y1="400" x2="510" y2="466" stroke="white" stroke-width="4.5" stroke-opacity="0.50" stroke-linecap="round"/>
+
+  <!-- Horizontal bridges: top row and bottom row (gold) -->
+  <line x1="290" y1="334" x2="510" y2="334" stroke="#F5A623" stroke-width="3" stroke-opacity="0.40" stroke-linecap="round"/>
+  <line x1="290" y1="466" x2="510" y2="466" stroke="#F5A623" stroke-width="3" stroke-opacity="0.40" stroke-linecap="round"/>
+
+  <!-- Corner nodes (white) -->
+  <circle cx="290" cy="334" r="18" fill="white"/>
+  <circle cx="510" cy="334" r="18" fill="white"/>
+  <circle cx="290" cy="466" r="18" fill="white"/>
+  <circle cx="510" cy="466" r="18" fill="white"/>
+
+  <!-- Subtle inner shadow on corner nodes -->
+  <circle cx="290" cy="334" r="9"  fill="#0A1628" opacity="0.10"/>
+  <circle cx="510" cy="334" r="9"  fill="#0A1628" opacity="0.10"/>
+  <circle cx="290" cy="466" r="9"  fill="#0A1628" opacity="0.10"/>
+  <circle cx="510" cy="466" r="9"  fill="#0A1628" opacity="0.10"/>
+
+  <!-- Center node (gold, most prominent element) -->
+  <circle cx="400" cy="400" r="34" fill="url(#centerGlow)"/>
+  <!-- Centre highlight -->
+  <circle cx="393" cy="393" r="10" fill="white" opacity="0.22"/>
+</svg>
