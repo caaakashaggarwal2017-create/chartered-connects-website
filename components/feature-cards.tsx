@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube } from "lucide-react"
+import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube, FileText } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 const ARTICLESHIP_URL = "https://ca-articleship-connect.netlify.app/"
@@ -175,6 +175,57 @@ export default function FeatureCards() {
               </span>
             </div>
           </a>
+        </div>
+
+        {/* Resume Builder card — full width, green accent */}
+        <div className="relative mt-5">
+          <Link
+            href="/resume-builder"
+            className="group relative bg-white border-2 border-[#059669]/30 rounded-xl p-6 hover:shadow-lg hover:border-[#059669] transition-all duration-200 flex flex-col md:flex-row gap-6 overflow-hidden block"
+          >
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#059669] rounded-l-xl" aria-hidden="true" />
+            <div className="absolute top-4 right-4 flex gap-2">
+              <span className="inline-flex items-center bg-[#059669] text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide">AI-Powered</span>
+              <span className="inline-flex items-center bg-green-50 text-green-700 text-[10px] font-medium px-2.5 py-1 rounded-full border border-green-200">Free</span>
+            </div>
+            <div className="pl-4 flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-11 h-11 bg-[#059669] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                  <FileText className="h-5 w-5 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="font-bold text-[#0A1628] text-xl">CA Resume Builder</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-xl">
+                Build a professional CA resume from scratch or upload your existing resume for AI-powered improvements. CA-specific templates for articleship, practice, and industry roles.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 mb-4">
+                {["Build from scratch", "Upload & improve with AI", "CA-specific templates", "Download as PDF"].map((s) => (
+                  <span key={s} className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#059669]" aria-hidden="true" />{s}
+                  </span>
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-[#059669] group-hover:underline">Build My Resume →</span>
+            </div>
+            <div className="md:w-56 flex-shrink-0 hidden md:flex">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 w-full flex flex-col justify-between min-h-[120px]">
+                <div className="space-y-2">
+                  <div className="h-3 bg-[#059669]/40 rounded w-3/4" />
+                  <div className="h-2 bg-gray-300 rounded w-1/2" />
+                  <div className="border-t border-green-200 pt-2 mt-2 space-y-1.5">
+                    <div className="h-2 bg-gray-200 rounded w-full" />
+                    <div className="h-2 bg-gray-200 rounded w-5/6" />
+                    <div className="h-2 bg-gray-200 rounded w-4/6" />
+                  </div>
+                  <div className="border-t border-green-200 pt-2 space-y-1.5">
+                    <div className="h-2 bg-gray-200 rounded w-full" />
+                    <div className="h-2 bg-gray-200 rounded w-3/4" />
+                  </div>
+                </div>
+                <p className="text-green-700 text-xs font-medium mt-3 text-center">CA-optimised template</p>
+              </div>
+            </div>
+          </Link>
         </div>
 
         {/* Podcast card — full width, dark navy with red accent */}

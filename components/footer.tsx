@@ -79,6 +79,7 @@ export default function Footer() {
               {[
                 { href: "/articleship", label: "CA Articleship Connect" },
                 { href: "/directory", label: "Find a CA" },
+                { href: "/resume-builder", label: "CA Resume Builder" },
                 { href: "/about", label: "About Us" },
                 { href: LINKEDIN_URL, label: "LinkedIn Community", external: true },
               ].map(({ href, label, external }) => (

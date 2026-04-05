@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/calendar", label: "Calendar", external: false },
   { href: "/newsletter", label: "Newsletter", external: false },
   { href: "/directory", label: "Find a CA", external: false },
+  { href: "/resume-builder", label: "Resume", isResume: true, external: false },
 ]
 
 export default function Nav() {
@@ -73,13 +74,22 @@ export default function Nav() {
                     pathname === link.href
                       ? link.isPodcast
                         ? "text-[#E53E3E] bg-red-50"
+                        : (link as any).isResume
+                        ? "text-[#059669] bg-green-50"
                         : "text-[#F5A623] bg-amber-50"
                       : link.isPodcast
                       ? "text-[#E53E3E] hover:text-[#c53030] hover:bg-red-50"
+                      : (link as any).isResume
+                      ? "text-[#059669] hover:text-[#047857] hover:bg-green-50"
                       : "text-gray-600 hover:text-[#0A1628] hover:bg-gray-50"
                   )}
                 >
                   {link.label}
+                  {(link as any).isResume && (
+                    <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#059669] text-white leading-none">
+                      NEW
+                    </span>
+                  )}
                 </Link>
               )
             )}
@@ -151,9 +161,13 @@ export default function Nav() {
                           pathname === link.href
                             ? link.isPodcast
                               ? "text-[#E53E3E] bg-red-50 font-semibold"
+                              : (link as any).isResume
+                              ? "text-[#059669] bg-green-50 font-semibold"
                               : "text-[#F5A623] bg-amber-50 font-semibold"
                             : link.isPodcast
                             ? "text-[#E53E3E] hover:bg-red-50"
+                            : (link as any).isResume
+                            ? "text-[#059669] hover:bg-green-50"
                             : "text-gray-700 hover:bg-gray-50"
                         )}
                       >
@@ -161,6 +175,11 @@ export default function Nav() {
                           <Youtube className="h-4 w-4 text-[#E53E3E]" aria-hidden="true" />
                         )}
                         {link.label}
+                        {(link as any).isResume && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#059669] text-white leading-none">
+                            NEW
+                          </span>
+                        )}
                       </Link>
                     )
                   )}
