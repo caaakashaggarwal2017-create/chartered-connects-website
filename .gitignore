@@ -34,4 +34,7 @@ yarn-error.log*
 next-env.d.ts
 
 # data files (local submissions)
-data/
+/data/
+
+# Local Netlify folder
+.netlify
