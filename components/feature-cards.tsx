@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube, FileText } from "lucide-react"
+import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube, FileText, Zap } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 const ARTICLESHIP_URL = "https://ca-articleship-connect.netlify.app/"
@@ -223,6 +223,56 @@ export default function FeatureCards() {
                   </div>
                 </div>
                 <p className="text-green-700 text-xs font-medium mt-3 text-center">CA-optimised template</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* AI Tools card — full width, blue accent */}
+        <div className="relative mt-5">
+          <Link
+            href="/ai-tools"
+            className="group relative bg-white border-2 border-[#2563EB]/30 rounded-xl p-6 hover:shadow-lg hover:border-[#2563EB] transition-all duration-200 flex flex-col md:flex-row gap-6 overflow-hidden block"
+          >
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#2563EB] rounded-l-xl" aria-hidden="true" />
+            <div className="absolute top-4 right-4 flex gap-2">
+              <span className="inline-flex items-center bg-[#2563EB] text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide">NEW</span>
+              <span className="inline-flex items-center bg-blue-50 text-blue-700 text-[10px] font-medium px-2.5 py-1 rounded-full border border-blue-200">Free to browse</span>
+            </div>
+            <div className="pl-4 flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-11 h-11 bg-[#2563EB] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                  <Zap className="h-5 w-5 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="font-bold text-[#0A1628] text-xl">AI Tools for Finance Professionals</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-xl">
+                Curated directory of AI tools for CAs, CFOs, and finance teams in India. GST automation, audit assistance, payroll AI, financial forecasting — find the right tool for your practice.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 mb-4">
+                {["Tax & GST tools", "Audit AI", "Payroll automation", "Forecasting tools"].map((s) => (
+                  <span key={s} className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" aria-hidden="true" />{s}
+                  </span>
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-[#2563EB] group-hover:underline">Explore AI Tools →</span>
+            </div>
+            <div className="md:w-56 flex-shrink-0 hidden md:flex">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 w-full flex flex-col gap-2">
+                {[
+                  { initials: 'TG', label: 'TaxGPT India', sub: 'Tax & GST' },
+                  { initials: 'CT', label: 'ClearTax AI', sub: 'Compliance' },
+                  { initials: 'AA', label: 'AudAI', sub: 'Audit' },
+                ].map(({ initials, label, sub }) => (
+                  <div key={initials} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-blue-100">
+                    <div className="w-6 h-6 rounded bg-[#2563EB] flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0">{initials}</div>
+                    <div>
+                      <p className="text-[#0A1628] text-[11px] font-semibold leading-tight">{label}</p>
+                      <p className="text-gray-400 text-[10px]">{sub}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </Link>
