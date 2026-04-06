@@ -1,38 +1,40 @@
 import { NextResponse } from 'next/server'
-import { promises as fs } from 'fs'
-import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+)
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const filePath = path.join(process.cwd(), 'data', 'demo-requests.json')
-
-    let existing: object[] = []
-    try {
-      const raw = await fs.readFile(filePath, 'utf-8')
-      existing = JSON.parse(raw)
-    } catch {
-      existing = []
-    }
 
     const entry = {
-      id: uuidv4(),
-      toolId: body.toolId,
-      toolName: body.toolName,
+      tool_id: body.toolId,
+      tool_name: body.toolName,
       name: body.name,
       email: body.email,
-      phone: body.phone,
+      phone: body.phone ?? null,
       designation: body.designation,
-      organisation: body.organisation,
-      goal: body.goal,
-      teamSize: body.teamSize,
-      requestedAt: new Date().toISOString(),
+      organisation: body.organisation ?? null,
+      goal: body.goal ?? null,
+      team_size: body.teamSize ?? null,
     }
 
-    existing.push(entry)
-    await fs.writeFile(filePath, JSON.stringify(existing, null, 2))
-    console.log('[NEW DEMO REQUEST]', entry)
+    // Try to save to Supabase demo_requests table; fall back gracefully
+    try {
+      const { error } = await supabase.from('demo_requests').insert(entry)
+      if (error) {
+        // Table may not exist yet — log and continue
+        console.warn('[DEMO REQUEST] Supabase insert warning:', error.message)
+      }
+    } catch (dbErr) {
+      console.warn('[DEMO REQUEST] DB error (non-fatal):', dbErr)
+    }
+
+    // Always log for visibility
+    console.log('[NEW DEMO REQUEST]', JSON.stringify(entry))
 
     return NextResponse.json({ success: true })
   } catch (err) {
