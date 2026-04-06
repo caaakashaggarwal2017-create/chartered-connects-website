@@ -6,10 +6,6 @@ interface Props {
   params: { slug: string }
 }
 
-export async function generateStaticParams() {
-  return aiTools.map(tool => ({ slug: tool.slug }))
-}
-
 export default function AIToolDetailPage({ params }: Props) {
   const tool = aiTools.find(t => t.slug === params.slug)
 
