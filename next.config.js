@@ -2,12 +2,6 @@
 const path = require('path')
 
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     domains: ['media.licdn.com', 'placehold.co'],
   },
