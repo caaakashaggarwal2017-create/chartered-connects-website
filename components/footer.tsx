@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0A1628] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -81,6 +81,7 @@ export default function Footer() {
                 { href: "/directory", label: "Find a CA" },
                 { href: "/resume-builder", label: "CA Resume Builder" },
                 { href: "/ai-tools", label: "AI Tools Directory" },
+                { href: "/mentorship", label: "CA Mentorship" },
                 { href: "/about", label: "About Us" },
                 { href: LINKEDIN_URL, label: "LinkedIn Community", external: true },
               ].map(({ href, label, external }) => (
@@ -94,6 +95,25 @@ export default function Footer() {
                       {label}
                     </Link>
                   )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Mentorship */}
+          <div>
+            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Mentorship</h3>
+            <ul className="space-y-2.5">
+              {[
+                { href: "/mentorship", label: "Find a Mentor" },
+                { href: "/mentorship?category=Big+4", label: "Big 4 Mentors" },
+                { href: "/mentorship?category=Industry+%2F+CFO", label: "Industry / CFO" },
+                { href: "/mentor-onboarding", label: "Become a Mentor" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="text-gray-400 hover:text-[#F5A623] text-sm transition-colors">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

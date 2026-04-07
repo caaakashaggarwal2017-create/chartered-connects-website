@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube, FileText, Zap } from "lucide-react"
+import { BookOpen, Briefcase, Calendar, Mail, Users, GraduationCap, Youtube, FileText, Zap, UserCheck } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 const ARTICLESHIP_URL = "https://ca-articleship-connect.netlify.app/"
@@ -269,6 +269,56 @@ export default function FeatureCards() {
                     <div className="w-6 h-6 rounded bg-[#2563EB] flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0">{initials}</div>
                     <div>
                       <p className="text-[#0A1628] text-[11px] font-semibold leading-tight">{label}</p>
+                      <p className="text-gray-400 text-[10px]">{sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Mentorship card — full width, amber accent */}
+        <div className="relative mt-5">
+          <Link
+            href="/mentorship"
+            className="group relative bg-white border-2 border-[#D97706]/30 rounded-xl p-6 hover:shadow-lg hover:border-[#D97706] transition-all duration-200 flex flex-col md:flex-row gap-6 overflow-hidden block"
+          >
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D97706] rounded-l-xl" aria-hidden="true" />
+            <div className="absolute top-4 right-4 flex gap-2">
+              <span className="inline-flex items-center bg-[#D97706] text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide">NEW</span>
+              <span className="inline-flex items-center bg-amber-50 text-amber-700 text-[10px] font-medium px-2.5 py-1 rounded-full border border-amber-200">Free Sessions</span>
+            </div>
+            <div className="pl-4 flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-11 h-11 bg-[#D97706] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                  <UserCheck className="h-5 w-5 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="font-bold text-[#0A1628] text-xl">CA Mentorship Programme</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-xl">
+                Book a free 30-minute 1:1 session with verified CA professionals — Big 4, industry, ICAI, and practice heads. Candid guidance on articleship, career paths, and beyond.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 mb-4">
+                {["10+ verified mentors", "Free sessions", "Big 4 & Industry", "Practice Heads"].map((s) => (
+                  <span key={s} className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97706]" aria-hidden="true" />{s}
+                  </span>
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-[#D97706] group-hover:underline">Meet the Mentors →</span>
+            </div>
+            <div className="md:w-56 flex-shrink-0 hidden md:flex">
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 w-full flex flex-col gap-2">
+                {[
+                  { initials: 'RK', name: 'CA Rahul Khanna', sub: 'Deloitte · Big 4', color: '#0A1628' },
+                  { initials: 'PS', name: 'CA Priya Sharma', sub: 'EY · Tax Advisory', color: '#7C3AED' },
+                  { initials: 'AM', name: 'CA Arun Mehta', sub: 'CFO · Industry', color: '#059669' },
+                ].map(({ initials, name, sub, color }) => (
+                  <div key={initials} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-amber-100">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0" style={{ backgroundColor: color }}>{initials}</div>
+                    <div>
+                      <p className="text-[#0A1628] text-[11px] font-semibold leading-tight">{name}</p>
                       <p className="text-gray-400 text-[10px]">{sub}</p>
                     </div>
                   </div>

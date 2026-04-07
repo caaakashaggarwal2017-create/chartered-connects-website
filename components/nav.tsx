@@ -20,6 +20,7 @@ const navLinks = [
   { href: "/directory", label: "Find a CA", external: false },
   { href: "/resume-builder", label: "Resume", isResume: true, external: false },
   { href: "/ai-tools", label: "AI Tools", isAITools: true, external: false },
+  { href: "/mentorship", label: "Mentorship", isMentorship: true, external: false },
 ]
 
 export default function Nav() {
@@ -79,6 +80,8 @@ export default function Nav() {
                         ? "text-[#059669] bg-green-50"
                         : (link as any).isAITools
                         ? "text-[#2563EB] bg-blue-50"
+                        : (link as any).isMentorship
+                        ? "text-[#D97706] bg-amber-50"
                         : "text-[#F5A623] bg-amber-50"
                       : link.isPodcast
                       ? "text-[#E53E3E] hover:text-[#c53030] hover:bg-red-50"
@@ -86,6 +89,8 @@ export default function Nav() {
                       ? "text-[#059669] hover:text-[#047857] hover:bg-green-50"
                       : (link as any).isAITools
                       ? "text-[#2563EB] hover:text-[#1d4ed8] hover:bg-blue-50"
+                      : (link as any).isMentorship
+                      ? "text-[#D97706] hover:text-amber-700 hover:bg-amber-50"
                       : "text-gray-600 hover:text-[#0A1628] hover:bg-gray-50"
                   )}
                 >
@@ -97,6 +102,11 @@ export default function Nav() {
                   )}
                   {(link as any).isAITools && (
                     <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#2563EB] text-white leading-none">
+                      NEW
+                    </span>
+                  )}
+                  {(link as any).isMentorship && (
+                    <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#D97706] text-white leading-none">
                       NEW
                     </span>
                   )}
@@ -175,6 +185,8 @@ export default function Nav() {
                               ? "text-[#059669] bg-green-50 font-semibold"
                               : (link as any).isAITools
                               ? "text-[#2563EB] bg-blue-50 font-semibold"
+                              : (link as any).isMentorship
+                              ? "text-[#D97706] bg-amber-50 font-semibold"
                               : "text-[#F5A623] bg-amber-50 font-semibold"
                             : link.isPodcast
                             ? "text-[#E53E3E] hover:bg-red-50"
@@ -182,6 +194,8 @@ export default function Nav() {
                             ? "text-[#059669] hover:bg-green-50"
                             : (link as any).isAITools
                             ? "text-[#2563EB] hover:bg-blue-50"
+                            : (link as any).isMentorship
+                            ? "text-[#D97706] hover:bg-amber-50"
                             : "text-gray-700 hover:bg-gray-50"
                         )}
                       >
@@ -196,6 +210,11 @@ export default function Nav() {
                         )}
                         {(link as any).isAITools && (
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#2563EB] text-white leading-none">
+                            NEW
+                          </span>
+                        )}
+                        {(link as any).isMentorship && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#D97706] text-white leading-none">
                             NEW
                           </span>
                         )}
