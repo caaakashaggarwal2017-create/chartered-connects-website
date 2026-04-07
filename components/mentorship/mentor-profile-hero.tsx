@@ -29,7 +29,7 @@ export default function MentorProfileHero({ mentor, onRequestSession }: MentorPr
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold text-gray-900">{mentor.name}</h1>
                 {mentor.isVerified && (
-                  <BadgeCheck className="w-5 h-5 text-[#D97706]" title="Verified CA" />
+                  <BadgeCheck className="w-5 h-5 text-[#D97706]" aria-label="Verified CA" />
                 )}
               </div>
               <p className="text-gray-600 text-sm mt-0.5">{mentor.designation}</p>
